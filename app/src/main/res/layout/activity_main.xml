@@ -7,12 +7,13 @@
     tools:context=".MainActivity">
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottom_nav"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/bottom_nav"
-        app:layout_constraintStart_toStartOf="parent"
+        android:background="?android:attr/windowBackground"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:background="?android:attr/windowBackground" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/menu_bottom_main" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
