@@ -14,7 +14,7 @@ class LocalStatisticsFragment : Fragment() {
         fun newInstance() = LocalStatisticsFragment()
     }
 
-    private lateinit var viewModel: LocalStatisticsViewModel
+    private lateinit var viewModel: LocalStatisticsFragmentViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +25,7 @@ class LocalStatisticsFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(LocalStatisticsViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(LocalStatisticsFragmentViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
