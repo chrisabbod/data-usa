@@ -14,7 +14,7 @@ class HistoricalStatisticsFragment : Fragment() {
         fun newInstance() = HistoricalStatisticsFragment()
     }
 
-    private lateinit var viewModel: HistoricalStatisticsViewModel
+    private lateinit var viewModel: HistoricalStatisticsFragmentViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +25,7 @@ class HistoricalStatisticsFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(HistoricalStatisticsViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(HistoricalStatisticsFragmentViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
