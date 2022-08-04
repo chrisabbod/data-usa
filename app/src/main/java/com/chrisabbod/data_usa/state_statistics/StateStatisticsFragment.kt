@@ -14,7 +14,7 @@ class StateStatisticsFragment : Fragment() {
         fun newInstance() = StateStatisticsFragment()
     }
 
-    private lateinit var viewModel: StateStatisticsViewModel
+    private lateinit var viewModel: StateStatisticsFragmentViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -25,7 +25,7 @@ class StateStatisticsFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(StateStatisticsViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(StateStatisticsFragmentViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
