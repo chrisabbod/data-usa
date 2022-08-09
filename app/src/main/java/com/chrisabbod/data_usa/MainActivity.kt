@@ -13,9 +13,6 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
 
-    private val rootDestinations =
-        setOf(R.id.navigation_local, R.id.navigation_state, R.id.navigation_historical)
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
@@ -26,7 +23,7 @@ class MainActivity : AppCompatActivity() {
             .findFragmentById(R.id.nav_host_fragment_activity_main) as NavHostFragment
         val navController = navHostFragment.findNavController()
         val appBarConfiguration = AppBarConfiguration(
-            rootDestinations
+            setOf(R.id.navigation_local, R.id.navigation_state, R.id.navigation_historical)
         )
 
         bottomNav.setupWithNavController(navController)
