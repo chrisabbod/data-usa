@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">data-usa</string>
     <string name="title_local">Local</string>
+    <string name="title_state">State</string>
 </resources>
