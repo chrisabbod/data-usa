@@ -5,15 +5,19 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.chrisabbod.data_usa.R
+import com.chrisabbod.data_usa.databinding.FragmentStateStatisticsBinding
 
 class StateStatisticsFragment : Fragment() {
+
+    private lateinit var binding: FragmentStateStatisticsBinding
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.fragment_state_statistics, container, false)
+    ): View {
+        binding = FragmentStateStatisticsBinding.inflate(inflater, container, false)
+        
+        return binding.root
     }
-
+    
 }
