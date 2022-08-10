@@ -6,13 +6,12 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import com.chrisabbod.data_usa.databinding.FragmentLocalStatisticsBinding
 import com.chrisabbod.data_usa.model.CityData
 
 class LocalStatisticsFragment : Fragment() {
 
-    private var binding: FragmentLocalStatisticsBinding? = null
+    private lateinit var binding: FragmentLocalStatisticsBinding
 
     private var cityDataList = listOf(
         CityData("Macomb Township", 90758),
@@ -32,17 +31,12 @@ class LocalStatisticsFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         binding = FragmentLocalStatisticsBinding.inflate(inflater, container, false)
-        binding?.rvLocalStatistics?.layoutManager = LinearLayoutManager(activity)
-        binding?.rvLocalStatistics?.adapter = LocalStatisticsAdapter(cityDataList)
+        binding.rvLocalStatistics.layoutManager = LinearLayoutManager(activity)
+        binding.rvLocalStatistics.adapter = LocalStatisticsAdapter(cityDataList)
 
-        return binding!!.root
-    }
-
-    override fun onDestroy() {
-        super.onDestroy()
-        binding = null
+        return binding.root
     }
 }
 
