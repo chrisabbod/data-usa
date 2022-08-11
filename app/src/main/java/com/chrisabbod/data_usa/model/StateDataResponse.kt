@@ -2,7 +2,7 @@ package com.chrisabbod.data_usa.model
 
 import com.google.gson.annotations.SerializedName
 
-data class BaseJSONResponse(
+data class StateDataResponse(
     @SerializedName("data")
     val data: List<RaceData>
 )
@@ -17,5 +17,5 @@ data class RaceData(
     @SerializedName("Hispanic Population")
     val hispanicPopulation: Int,
     @SerializedName("Geography")
-    val  geography: String
+    val  geography: String,
 )
