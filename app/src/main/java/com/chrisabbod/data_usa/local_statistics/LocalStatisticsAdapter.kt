@@ -24,8 +24,12 @@ class LocalStatisticsAdapter(private val data: List<CityData>) :
     }
 
     override fun onBindViewHolder(holder: LocalStatisticsViewHolder, position: Int) {
-        holder.localName.text = data[position].cityName
-        holder.localStatistic.text = data[position].cityPopulation.toString()
+        val item = data[position]
+
+        if (!data.isNullOrEmpty()) {
+            holder.localName.text = item.cityName
+            holder.localStatistic.text = item.cityPopulation.toString()
+        }
     }
 
     override fun getItemCount(): Int {
