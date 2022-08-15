@@ -1,5 +1,6 @@
 package com.chrisabbod.data_usa.state_statistics
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -23,8 +24,17 @@ class StateStatisticsAdapter(private val data: List<StateData>) :
     }
 
     override fun onBindViewHolder(holder: StateStatisticsViewHolder, position: Int) {
-        holder.stateName.text = data[position].stateName
-        holder.stateStatistic.text = data[position].statePopulation.toString()
+        if (position < data.size && position >= 0) {
+            val item = data[position]
+
+            holder.stateName.text = item.stateName
+            holder.stateStatistic.text = item.statePopulation.toString()
+        } else {
+            Log.e(
+                "onBindViewHolder",
+                "Item out of bounds. Position ($position). Array size (${data.size})"
+            )
+        }
     }
 
     override fun getItemCount(): Int {
