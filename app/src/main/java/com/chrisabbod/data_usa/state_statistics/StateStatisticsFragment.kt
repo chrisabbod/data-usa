@@ -23,7 +23,7 @@ class StateStatisticsFragment : Fragment() {
         StateData("Ohio", 1234567),
         StateData("Washington", 1234567),
         StateData("California", 1234567),
-        )
+    )
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
