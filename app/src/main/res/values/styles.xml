@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Recyclerview List Item Styles -->
+
+    <style name="rv_item_name" >
+        <item name="android:layout_marginBottom">8dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="rv_item_statistic">
+        <item name="android:textSize">16sp</item>
+    </style>
+
+</resources>

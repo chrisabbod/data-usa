@@ -17,5 +17,5 @@ data class RaceData(
     @SerializedName("Hispanic Population")
     val hispanicPopulation: Int,
     @SerializedName("Geography")
-    val  geography: String
+    val  geography: String,
 )

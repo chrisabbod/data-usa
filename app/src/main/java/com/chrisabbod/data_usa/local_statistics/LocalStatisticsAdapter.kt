@@ -1,5 +1,6 @@
 package com.chrisabbod.data_usa.local_statistics
 
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
@@ -24,8 +25,17 @@ class LocalStatisticsAdapter(private val data: List<CityData>) :
     }
 
     override fun onBindViewHolder(holder: LocalStatisticsViewHolder, position: Int) {
-        holder.localName.text = data[position].cityName
-        holder.localStatistic.text = data[position].cityPopulation.toString()
+        if (position < data.size && position >= 0) {
+            val item = data[position]
+
+            holder.localName.text = item.cityName
+            holder.localStatistic.text = item.cityPopulation.toString()
+        } else {
+            Log.e(
+                "onBindViewHolder",
+                "Item out of bounds. Position ($position). Array size (${data.size})"
+            )
+        }
     }
 
     override fun getItemCount(): Int {

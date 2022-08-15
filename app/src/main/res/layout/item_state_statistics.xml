@@ -7,17 +7,19 @@
     android:padding="16dp">
 
     <TextView
-        android:id="@+id/tv_city_name"
-        style="@style/rv_item_name"
+        android:id="@+id/tv_state_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        tools:text="Macomb Township" />
+        android:layout_marginBottom="8dp"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        tools:text="Michigan" />
 
     <TextView
-        android:id="@+id/tv_city_statistic"
-        style="@style/rv_item_statistic"
+        android:id="@+id/tv_state_statistic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:textSize="16sp"
         tools:text="123456" />
 
 </LinearLayout>
