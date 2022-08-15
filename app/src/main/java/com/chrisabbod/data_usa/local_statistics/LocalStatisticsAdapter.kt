@@ -25,13 +25,18 @@ class LocalStatisticsAdapter(private val data: List<CityData>) :
     }
 
     override fun onBindViewHolder(holder: LocalStatisticsViewHolder, position: Int) {
-        val item = data[position]
 
-        if (data.isNotEmpty() && position < data.size && position >= 0) {
-            holder.localName.text = item.cityName
-            holder.localStatistic.text = item.cityPopulation.toString()
-        } else {
-            Log.e("LocalStatisticsAdapter", "Problem found in onBindViewHolder")
+        try {
+            val item = data[data.size + 5]
+
+            if (data.isNotEmpty()) {
+                holder.localName.text = item.cityName
+                holder.localStatistic.text = item.cityPopulation.toString()
+            } else {
+                Log.e("LocalStatisticsAdapter", "Problem found in onBindViewHolder")
+            }
+        } catch (e: IndexOutOfBoundsException) {
+            Log.e("Position","Position was out of bounds")
         }
     }
 
