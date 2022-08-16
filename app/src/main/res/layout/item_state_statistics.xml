@@ -10,16 +10,14 @@
         android:id="@+id/tv_state_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="8dp"
-        android:textSize="16sp"
-        android:textStyle="bold"
+        style="@style/rv_item_name"
         tools:text="Michigan" />
 
     <TextView
         android:id="@+id/tv_state_statistic"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="16sp"
+        style="@style/rv_item_statistic"
         tools:text="123456" />
 
 </LinearLayout>
