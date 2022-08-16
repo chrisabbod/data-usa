@@ -3,4 +3,5 @@
     <string name="title_local">Local</string>
     <string name="title_state">State</string>
     <string name="title_historical">Historical</string>
+    <string name="menu_settings">Settings</string>
 </resources>
