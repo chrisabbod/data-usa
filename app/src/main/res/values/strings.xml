@@ -1,8 +1,11 @@
 <resources>
-    <string name="app_name">data-usa</string>
+    <string name="app_name">Data USA</string>
+    <string name="login_email">Email</string>
+    <string name="login_password">Password</string>
     <string name="title_local">Local</string>
     <string name="title_state">State</string>
     <string name="title_historical">Historical</string>
     <string name="menu_settings">Settings</string>
     <string name="settings">Settings</string>
+    <string name="btn_login">Log In</string>
 </resources>
