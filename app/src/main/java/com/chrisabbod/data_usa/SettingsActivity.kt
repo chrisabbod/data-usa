@@ -13,7 +13,8 @@ class SettingsActivity : AppCompatActivity() {
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        onBackPressed()
+        finish()
         return super.onOptionsItemSelected(item)
     }
 }
+
