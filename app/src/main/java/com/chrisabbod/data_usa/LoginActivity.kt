@@ -1,5 +1,6 @@
 package com.chrisabbod.data_usa
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import com.chrisabbod.data_usa.databinding.ActivityLoginBinding
@@ -13,6 +14,13 @@ class LoginActivity : AppCompatActivity() {
         binding = ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        
+        binding.btnLogin.setOnClickListener {
+            startActivity(
+                Intent(
+                    this,
+                    MainActivity::class.java
+                )
+            )
+        }
     }
 }
