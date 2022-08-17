@@ -16,6 +16,7 @@
         android:theme="@style/Theme.Datausa"
         tools:targetApi="31">
         <activity
+            android:theme="@style/LoginTheme"
             android:name=".LoginActivity"
             android:exported="true">
             <intent-filter>
