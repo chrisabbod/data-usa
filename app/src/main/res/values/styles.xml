@@ -13,4 +13,9 @@
         <item name="android:textSize">16sp</item>
     </style>
 
+    <style name="tv_login_title">
+        <item name="android:textSize">48sp</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 </resources>
